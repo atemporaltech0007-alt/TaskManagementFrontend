@@ -79,17 +79,17 @@ Crear archivo `.env` en la raíz del proyecto:
 # URL de la API backend
 VITE_API_URL=http://localhost:5016/api
 
-# Credenciales para autenticación con la API (NO CAMBIAR)
-VITE_API_USER=9gk7sPAj9hE=
-VITE_API_PASSWORD=NsX8xEav35+BvurRn3x2bANt7lnq2RJ6odp/zr3HQ+k=
+# Credenciales para autenticación con la API (obtener del equipo backend)
+VITE_API_USER=your_encrypted_api_user
+VITE_API_PASSWORD=your_encrypted_api_password
 
-# Credenciales del usuario final para login (CAMBIAR SEGÚN NECESIDAD)
-VITE_LOGIN_USER=sentry
-VITE_LOGIN_PASSWORD=sentry
+# Credenciales del usuario final para login
+VITE_LOGIN_USER=admin
+VITE_LOGIN_PASSWORD=secure_password
 ```
 
 **Importante:**
-- `VITE_API_USER` y `VITE_API_PASSWORD` son credenciales encriptadas para la comunicación frontend-backend. No modificar.
+- `VITE_API_USER` y `VITE_API_PASSWORD` son credenciales encriptadas. Solicitar al equipo backend.
 - `VITE_LOGIN_USER` y `VITE_LOGIN_PASSWORD` definen las credenciales del usuario final. Cambiar aquí para crear nuevos usuarios.
 
 ### Ejecutar en Desarrollo
@@ -139,7 +139,7 @@ Cuando dos usuarios intentan editar la misma tarea:
 
 ### 1. Login
 - Acceder a http://localhost:5173
-- Ingresar credenciales (por defecto: sentry / sentry)
+- Ingresar credenciales configuradas en `.env`
 - El sistema valida y obtiene token JWT automáticamente
 
 ### 2. Navegación
